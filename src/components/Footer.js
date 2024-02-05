@@ -1,5 +1,5 @@
 import React from 'react';
-import newyork from '../images/logo.png';
+import Logo from '../images/logo.png';
 
 const Footer = (props) => {
   return (
@@ -7,7 +7,7 @@ const Footer = (props) => {
         <div>
             <hr/>
             <hr className='mt-1'/>
-            <img src={newyork} className='w-52 h-8' />
+            <img src={Logo} className='w-52 h-8' alt='logo'/>
             <div className='flex flex-wrap justify-evenly p-4'>
                 <div>
                     <h1 className='font-bold text-sm'>NEWS</h1>
