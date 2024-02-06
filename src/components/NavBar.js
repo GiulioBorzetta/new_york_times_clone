@@ -3,8 +3,10 @@ import { TfiAlignRight } from "react-icons/tfi";
 import { FiSearch } from "react-icons/fi";
 import moment from 'moment';
 import logo from '../images/logo.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { auth } from '../firebase/setup';
+import { signOut } from 'firebase/auth';
 
 const NavBar = (props) => {
 
@@ -27,6 +29,18 @@ const NavBar = (props) => {
 
   const [searchIcon, setSearchIcon] = useState(false);
   const [sideMenu, setSideMenu] = useState(false);
+  const navigate = useNavigate()
+
+  const logout = async () => {
+    try{
+      await signOut(auth);
+      setTimeout(() => {
+        navigate('/');
+      },1000)
+    }catch(err){
+      console.error(err);
+    }
+  }
 
   return (
     <div className='grid grid-rows-3 md:p-7'>
@@ -62,9 +76,9 @@ const NavBar = (props) => {
             <h1 className='text-xs ml-5 hidden md:flex'>CANADA</h1>
             <h1 className='text-xs ml-5 hidden md:flex'>ESPANOL</h1>
             </div>
-            <Link to='/Login'>
+            {auth?.currentUser ? <button className='text-xs md:ml-96 bg-slate-400 p-1 w-16 text-white font-bold rounded-sm' onClick={logout}>LOGOUT</button>  : <Link to='/Login'>
               <button className='text-xs md:ml-96 bg-slate-400 p-1 w-16 text-white font-bold rounded-sm'>LOGIN</button>
-            </Link>
+            </Link>}
         </div>
 
 
