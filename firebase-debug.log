@@ -1,0 +1,40 @@
+[debug] [2024-02-06T12:29:33.335Z] ----------------------------------------------------------------------
+[debug] [2024-02-06T12:29:33.337Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\giuli\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2024-02-06T12:29:33.337Z] CLI Version:   13.1.0
+[debug] [2024-02-06T12:29:33.337Z] Platform:      win32
+[debug] [2024-02-06T12:29:33.337Z] Node Version:  v20.10.0
+[debug] [2024-02-06T12:29:33.337Z] Time:          Tue Feb 06 2024 13:29:33 GMT+0100 (Ora standard dell’Europa centrale)
+[debug] [2024-02-06T12:29:33.337Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-06T12:29:33.377Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-06T12:29:33.378Z] > authorizing via signed-in user (giulioborz@gmail.com)
+[debug] [2024-02-06T12:29:33.378Z] [iam] checking project newyorktimes-clone-196e9 for permissions ["firebase.projects.get"]
+[debug] [2024-02-06T12:29:33.381Z] > refreshing access token with scopes: []
+[debug] [2024-02-06T12:29:33.381Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-02-06T12:29:33.382Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-02-06T12:29:33.519Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-02-06T12:29:33.519Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-02-06T12:29:33.524Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/newyorktimes-clone-196e9:testIamPermissions [none]
+[debug] [2024-02-06T12:29:33.524Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/newyorktimes-clone-196e9:testIamPermissions x-goog-quota-user=projects/newyorktimes-clone-196e9
+[debug] [2024-02-06T12:29:33.524Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/newyorktimes-clone-196e9:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-02-06T12:29:34.304Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/newyorktimes-clone-196e9:testIamPermissions 200
+[debug] [2024-02-06T12:29:34.304Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/newyorktimes-clone-196e9:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-02-06T12:29:34.304Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/newyorktimes-clone-196e9 [none]
+[debug] [2024-02-06T12:29:34.580Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/newyorktimes-clone-196e9 200
+[debug] [2024-02-06T12:29:34.580Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/newyorktimes-clone-196e9 {"projectId":"newyorktimes-clone-196e9","projectNumber":"529709835243","displayName":"newyorktimes-clone","name":"projects/newyorktimes-clone-196e9","resources":{"hostingSite":"newyorktimes-clone-196e9"},"state":"ACTIVE","etag":"1_3b472290-775c-4f59-b6f0-d8decb2a7681"}
+[info] 
+[info] === Serving from 'C:\Users\giuli\Desktop\new_york_times_clone-1'...
+[info] 
+[debug] [2024-02-06T12:29:34.582Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/newyorktimes-clone-196e9/sites 
+[debug] [2024-02-06T12:29:35.545Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/newyorktimes-clone-196e9/sites 200
+[debug] [2024-02-06T12:29:35.545Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/newyorktimes-clone-196e9/sites {"sites":[{"name":"projects/newyorktimes-clone-196e9/sites/newyorktimes-clone-196e9","defaultUrl":"https://newyorktimes-clone-196e9.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-02-06T12:29:35.545Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/newyorktimes-clone-196e9/webApps/-/config [none]
+[debug] [2024-02-06T12:29:36.198Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/newyorktimes-clone-196e9/webApps/-/config 200
+[debug] [2024-02-06T12:29:36.198Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/newyorktimes-clone-196e9/webApps/-/config {"projectId":"newyorktimes-clone-196e9","appId":"1:529709835243:web:3192fe37542b386984efae","storageBucket":"newyorktimes-clone-196e9.appspot.com","apiKey":"AIzaSyAJuDswbTNwqkQdOcIe1wWJWJ25zGZb0RU","authDomain":"newyorktimes-clone-196e9.firebaseapp.com","messagingSenderId":"529709835243","measurementId":"G-8QLS090XRT"}
+[debug] [2024-02-06T12:29:36.201Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/newyorktimes-clone-196e9 [none]
+[debug] [2024-02-06T12:29:36.501Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/newyorktimes-clone-196e9 200
+[debug] [2024-02-06T12:29:36.501Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/newyorktimes-clone-196e9 {"projectId":"newyorktimes-clone-196e9","projectNumber":"529709835243","displayName":"newyorktimes-clone","name":"projects/newyorktimes-clone-196e9","resources":{"hostingSite":"newyorktimes-clone-196e9"},"state":"ACTIVE","etag":"1_3b472290-775c-4f59-b6f0-d8decb2a7681"}
+[debug] [2024-02-06T12:29:36.502Z] Specified "public" directory "build" does not exist; Deploy to Hosting site "newyorktimes-clone-196e9" may fail or be empty.
+[info] i  hosting[newyorktimes-clone-196e9]: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] +  hosting[newyorktimes-clone-196e9]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: ::1 - - [06/Feb/2024:12:29:41 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 OPR/106.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [06/Feb/2024:12:29:41 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 OPR/106.0.0.0\""}}
