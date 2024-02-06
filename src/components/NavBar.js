@@ -19,11 +19,11 @@ const NavBar = (props) => {
         if (response.data && response.data.response && response.data.response.docs) {
             props.setApiUp(response.data.response.docs);
         } else {
-            console.error('La risposta API non contiene dati validi:', response.data);
+            console.error(response.data);
         }
 
-    } catch (error) {
-        console.error('Errore durante la richiesta API:', error);
+    } catch (err) {
+        console.error(err);
     }
 };
 

@@ -25,12 +25,12 @@ const Main = () => {
           if (response.data && response.data.response && response.data.response.docs) {
               setNews(response.data.response.docs);
           } else {
-              console.error('La risposta API non contiene dati validi:', response.data);
+              console.error(response.data);
           }
   
           await delay(1000);
-      } catch (error) {
-          console.error('Errore durante la richiesta API:', error);
+      } catch (err) {
+          console.error(err);
       }
   };
   
